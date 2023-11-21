@@ -1,3 +1,5 @@
+// test
+
 console.log('background script is running');
 
 chrome.windows.onCreated.addListener(function (window) {
