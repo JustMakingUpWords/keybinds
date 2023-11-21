@@ -1,0 +1,48 @@
+{
+    "manifest_version": 3,
+    "name": "Keybinds",
+    "description": "Add custom keybinds for Google",
+    "version": "1.0",
+    "action":
+    {
+        "default_popup": "popup.html",
+        "default_icon": {
+            
+        }
+    },
+    "permissions":
+    [
+        "activeTab",
+        "tabs",
+        "storage",
+        "scripting"
+    ],
+    "content_scripts":
+    [
+        {
+            "matches": ["<all_urls>"],
+            "match_about_blank": true,
+            "js": ["content.js"]
+        }
+    ],
+    "background":
+    {
+        "service_worker": "background.js"
+    },
+    "commands": {
+        "run-foo": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Y",
+                "mac": "Command+Shift+Y"
+            },
+            "description": "Run \"foo\" on the current page."
+        },
+        "balls": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Z",
+                "mac": "Command+Shift+Z"
+            },
+            "description": "Run \"balls\" on the current page."
+        }
+    }
+}

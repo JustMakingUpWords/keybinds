@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <title>Document</title>
+
+    <style>
+        @font-face {
+            font-family: 'product sans';
+            src: url(Product\ Sans\ Regular.ttf);
+        }
+        body
+        {
+            font-family: 'product sans', Arial, sans-serif;
+        }
+
+        ol
+        {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li
+        {
+            margin-bottom: 10px; /* Create spacing between items */
+        }
+        ul
+        {
+            list-style-type: none;
+            padding-left: 15px;
+        }
+        .long-text {
+            width: 250px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+        #myImage
+        {
+            position: relative;
+            right: 5px;
+        }
+
+        input[type="checkbox"]
+        {
+            appearance: none;
+            width: 13px;
+            height: 13px;
+            border: 1px solid #000;
+            border-radius: 3px;
+            outline: none;
+            cursor: pointer;
+            vertical-align: -5px;
+        }
+        /* Style the checkbox when checked */
+        input[type="checkbox"]:checked
+        {
+            background-color: #000;
+        }
+    </style>
+
+    <script src="popup.js"></script>
+    
+</head>
+<body>
+    <div style="width: 300px;">
+        <h1>Keybinds</h1>
+        <hr>
+
+        <!-- <p>Set Keybind</p> -->
+        <h3>Set Keybind</h3>
+        <button id="keybindButton">Click to set Key</button>
+        <p style="display: inline; font-size: 14px;">Key: <span id="key">Empty</span></p>
+
+        <form>
+            <input type="checkbox" id="ctrl" name="checkbox1" value="value1" style="margin-top: 10px;">
+            <label for="checkbox1">Ctrl</label><br>
+          
+            <input type="checkbox" id="shift" name="checkbox2" value="value2">
+            <label for="checkbox2">Shift</label><br>
+          
+            <input type="checkbox" id="alt" name="checkbox3" value="value3">
+            <label for="checkbox3">Alt</label><br>
+
+            <input type="checkbox" id="command" name="checkbox4" value="value3">
+            <label for="checkbox4">Command (MacOS)</label><br>
+        </form>
+
+        <p>Link for Website:</p>
+        <textarea style="resize: none;" rows="3" cols="30" id="website"></textarea>
+        
+        <br>
+        <br>
+        <input type="button" id="save" value="Save Line">
+        <input type="button" id="reset" value="Reset All">
+        <br>
+
+        <br>
+        <hr>
+
+        <h3>List of Keybinds:</h3>
+        <div class="long-text">
+            <ul id="keybindList"></ul>
+        </div>
+    </div>
+</body>
+</html>
