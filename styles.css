@@ -1,25 +1,30 @@
-@font-face {
+@font-face 
+{
   font-family: 'product sans';
   src: url(Product\ Sans\ Regular.ttf);
 }
-body {
+body
+{
   font-family: 'product sans', Arial, sans-serif;
   background-color: #0c0c0c;
   color: #fff;
   padding: 3px;
 }
 
-.long-text {
+.long-text
+{
   width: 100%;
   word-wrap: break-word;
   word-break: break-all;
 }
-#myImage {
+#myImage
+{
   position: relative;
   right: 5px;
 }
 
-input[type='checkbox'] {
+input[type='checkbox']
+{
   appearance: none;
   width: 13px;
   height: 13px;
@@ -30,14 +35,16 @@ input[type='checkbox'] {
   vertical-align: -5px;
 }
 /* Style the checkbox when checked */
-input[type='checkbox']:checked {
+input[type='checkbox']:checked
+{
   background-color: #fff;
 }
 
 #website,
 #keybindButton,
 #save,
-#reset {
+#reset
+{
   outline: none;
   background-color: #242424;
   padding: 6px;
@@ -46,7 +53,8 @@ input[type='checkbox']:checked {
   border: none;
 }
 
-#keybindList {
+#keybindList
+{
   width: 90%;
   display: grid;
   grid-auto-flow: row;
@@ -56,7 +64,8 @@ input[type='checkbox']:checked {
   margin-top: 6px;
 }
 
-#keybindList div {
+#keybindList div
+{
   border-radius: 6px;
   background-color: #242424;
   width: 100%;
@@ -68,4 +77,10 @@ input[type='checkbox']:checked {
 
 #keybindList div button {
   background-color: red;
+}
+
+#keybindList div div
+{
+    display: grid;
+    grid-auto-flow: row;
 }

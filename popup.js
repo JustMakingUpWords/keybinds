@@ -35,7 +35,6 @@ window.onload = function()
                     text += "Alt + ";
                 }
                 text += splitKey[3];
-                text += data[key];
 
                 // const div1 = document.createElement('div');
                 // div1.style.float = 'left';
@@ -68,7 +67,7 @@ window.onload = function()
                 keybindList.innerHTML = `${keybindList.innerHTML}
                 <div>
                 <div style="float: left; width: 200px;">
-                new ${text}<br>
+                <p>${text}</p> <p>${data[key]}</p>
                 </div>
                 <button id="key-${key}"><img src="x.svg" id="myImage">
                 </button>
