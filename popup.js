@@ -1,3 +1,4 @@
+// prettier-ignore
 window.onload = function()
 {
     console.log("popup.js is running");
@@ -16,7 +17,7 @@ window.onload = function()
                 console.log(`Key: ${key}`);
                 console.log(data[key]);
 
-                const li = document.createElement("li");
+                // const li = document.createElement("li");
                 
                 let text = "";
                 let splitKey = key.split(",");
@@ -33,44 +34,55 @@ window.onload = function()
                 {
                     text += "Alt + ";
                 }
-                text += splitKey[3] + "<br>";
-                text += data[key] + "<br>";
+                text += splitKey[3];
+                text += data[key];
 
-                const div1 = document.createElement('div');
-                div1.style.float = 'left';
-                div1.style.width = '200px';
-                div1.innerHTML = text;
+                // const div1 = document.createElement('div');
+                // div1.style.float = 'left';
+                // div1.style.width = '200px';
+                // div1.innerHTML = text;
 
-                const button = document.createElement('button');
-                button.style.float = 'right';
-                button.style.width = '30px';
-                button.style.height = '30px';
-                button.style.marginTop = '5px';
-                button.style.background = 'none';
-                button.style.border = 'none';
+                // const button = document.createElement('button');
+                // button.style.float = 'right';
+                // button.style.width = '30px';
+                // button.style.height = '30px';
+                // button.style.marginTop = '5px';
+                // button.style.background = 'none';
+                // button.style.border = 'none';
                 
-                // on click button next to keybind text
-                button.onclick = function()
-                {
-                    chrome.storage.sync.remove(key, function()
-                    {
-                        console.log("removed", key);
-                        location.reload(); 
-                    });
+                // // on click button next to keybind text
+
+                // const buttonX = document.createElement('img');
+                // buttonX.src = "x.svg";
+                // buttonX.id = "myImage";
+                // button.appendChild(buttonX);
+
+                // const linebreak = document.createElement('p');
+                // linebreak.innerHTML = "<br><br><hr>";
+
+                // li.appendChild(div1);
+                // li.appendChild(button);
+                // li.appendChild(linebreak);
+                // keybindList.appendChild(li);
+
+                keybindList.innerHTML = `${keybindList.innerHTML}
+                <div>
+                <div style="float: left; width: 200px;">
+                new ${text}<br>
+                </div>
+                <button id="key-${key}"><img src="x.svg" id="myImage">
+                </button>
+                </div>
+                `
+                
+                document.getElementById(`key-${key}`).onclick = () => {
+                  chrome.storage.sync.remove(key, function()
+                  {
+                    console.log("removed", key);
+                    location.reload();
+                  });
                 }
 
-                const buttonX = document.createElement('img');
-                buttonX.src = "x.png";
-                buttonX.id = "myImage";
-                button.appendChild(buttonX);
-
-                const linebreak = document.createElement('p');
-                linebreak.innerHTML = "<br><br><hr>";
-
-                li.appendChild(div1);
-                li.appendChild(button);
-                li.appendChild(linebreak);
-                keybindList.appendChild(li);
             });
         }
     });
@@ -174,4 +186,3 @@ window.onload = function()
         location.reload();
     }
 }
-
