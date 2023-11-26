@@ -19,7 +19,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   console.log(message);
   if (message.action === 'openNewTab') {
     // Open a new tab
-    chrome.tabs.create({ url: message.url });
+    chrome.tabs.create({ url: message.url.startsWith('https://') ? message.url : `https://${message.url}` });
   }
   /*
     if (message.action === "getChecked")
