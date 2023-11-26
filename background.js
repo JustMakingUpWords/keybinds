@@ -21,9 +21,6 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     // Open a new tab
     chrome.tabs.create({ url: message.url });
   }
-  if (message.action === 'balls') {
-    console.log('I GOT MESSAGE FROM CONTENT SCRIPT YAY');
-  }
   /*
     if (message.action === "getChecked")
     {
