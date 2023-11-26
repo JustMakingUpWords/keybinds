@@ -76,11 +76,25 @@ input[type='checkbox']:checked
 }
 
 #keybindList div button {
-  background-color: red;
+  background-color: transparent;
+  outline: transparent;
+  border: transparent;
+}
+
+#keybindList div button img
+{
+    aspect-ratio: 1 / 1;
+    width: 30px;
 }
 
 #keybindList div div
 {
     display: grid;
+    grid-template-columns: 100%;
     grid-auto-flow: row;
+}
+
+#keybindList div div p
+{
+    margin: 2px;
 }
