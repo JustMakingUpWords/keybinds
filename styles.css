@@ -1,7 +1,7 @@
 @font-face 
 {
     font-family: 'product sans';
-    src: url(Product\ Sans\ Regular.ttf);
+    src: url(fonts/Product\ Sans\ Regular.ttf);
 }
 body
 {
@@ -80,6 +80,7 @@ input[type='checkbox']:checked
     outline: transparent;
     border: transparent;
     margin-right: -5px;
+    /* cursor: pointer; */
 }
 
 #keybindList div button img

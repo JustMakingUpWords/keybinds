@@ -69,7 +69,7 @@ window.onload = function()
                 <div style="float: left; width: 200px;">
                 <p>${text}</p> <p>${data[key]}</p>
                 </div>
-                <button id="key-${key}"><img src="x.svg" id="myImage">
+                <button id="key-${key}"><img src="images/x.png" id="myImage">
                 </button>
                 </div>
                 `
